@@ -47,6 +47,21 @@ public class TesteClasseLoja {
 		}
 		
 		@Test
+		public void CadastraLojaBranco() {
+			
+			Loja loja = new Loja (null, "");
+			
+			//Execução		
+			boolean retorno1 = lojaService.cadastrarLoja(loja);
+			
+			
+			//Verificação
+			assertTrue(retorno1);
+							
+					
+		}
+		
+		@Test
 		public void AlteraLoja() {
 			
 			//Execução
@@ -86,6 +101,7 @@ public class TesteClasseLoja {
 			
 			//Verificação
 			assertThat(loja.getCodigoLoja(), is(4));
+			System.out.println(loja);
 					
 					
 		}

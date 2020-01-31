@@ -57,8 +57,7 @@ public class TesteClasseGrupo {
 		
 		//Verificação
 		assertTrue(retorno1);
-		
-				
+						
 				
 	}
 	

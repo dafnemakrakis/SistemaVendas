@@ -52,6 +52,36 @@ public class TesteClasseProdutos {
 		}
 		
 		@Test
+		public void CadastraProdutoNcmBranco() {
+			
+			Produto produto = new Produto (null, "", "camiseta", grupo02);;
+			
+			//Execução		
+			boolean retorno1 = produtoService.cadastrarProduto(produto);
+			
+			
+			//Verificação
+			assertTrue(retorno1);
+							
+					
+		}
+		
+		@Test
+		public void CadastraProdutoNomeBranco() {
+			
+			Produto produto = new Produto (null, "61351", "", grupo02);;
+			
+			//Execução		
+			boolean retorno1 = produtoService.cadastrarProduto(produto);
+			
+			
+			//Verificação
+			assertTrue(retorno1);
+							
+					
+		}
+		
+		@Test
 		public void AlteraProduto() {
 			
 			//Execução

@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import br.com.gx2.dao.DAOFactory;
 import br.com.gx2.dao.VendedorDAO;
+import br.com.gx2.entity.Grupo;
 import br.com.gx2.entity.Loja;
 import br.com.gx2.entity.Vendedor;
 import br.com.gx2.service.LojaService;
@@ -41,6 +42,21 @@ public class TesteClasseVendedores {
 			assertTrue(retorno1);
 			assertTrue(retorno2);
 					
+					
+		}
+		
+		@Test
+		public void CadastraGrupoBranco() {
+			
+			Grupo grupo03 = new Grupo (null, "");
+			
+			//Execução		
+			boolean retorno1 = grupoService.cadastrarGrupo(grupo03);
+			
+			
+			//Verificação
+			assertTrue(retorno1);
+							
 					
 		}
 		

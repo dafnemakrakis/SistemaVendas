@@ -12,6 +12,7 @@ import org.junit.Test;
 import br.com.gx2.dao.ClienteDAO;
 import br.com.gx2.dao.DAOFactory;
 import br.com.gx2.entity.Cliente;
+import br.com.gx2.entity.Grupo;
 import br.com.gx2.entity.Loja;
 import br.com.gx2.service.ClienteService;
 import br.com.gx2.service.GrupoService;
@@ -42,6 +43,36 @@ public class TesteClasseClientes {
 			assertTrue(retorno1);
 			assertTrue(retorno2);
 					
+					
+		}
+		
+		@Test
+		public void CadastraClienteNomeBranco() {
+			
+			Cliente cliente = new Cliente (null, "", "96187898648"); 
+			
+			//Execução		
+			boolean retorno1 = clienteService.cadastrarCliente(cliente);
+			
+			
+			//Verificação
+			assertTrue(retorno1);
+							
+					
+		}
+		
+		@Test
+		public void CadastraClienteCpfBranco() {
+			
+			Cliente cliente = new Cliente (null, "Maria", ""); 
+			
+			//Execução		
+			boolean retorno1 = clienteService.cadastrarCliente(cliente);
+			
+			
+			//Verificação
+			assertTrue(retorno1);
+							
 					
 		}
 		
