@@ -4,11 +4,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-
-
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import org.junit.Test;
 
@@ -17,13 +13,13 @@ import br.com.gx2.entity.CupomFiscal;
 import br.com.gx2.entity.Loja;
 import br.com.gx2.entity.Vendedor;
 import br.com.gx2.service.CupomFiscalService;
-import br.com.gx2.service.LojaService;
 import br.com.gx2.service.ServiceFactory;
 
 public class TesteClasseCupom {
 	
 	//Montagem cenário
 			CupomFiscalService cupomService = ServiceFactory.createCupomFiscalService();
+			Date date = new Date();
 			
 			
 			Loja loja02 = new Loja (4, "Partenon");
@@ -36,7 +32,7 @@ public class TesteClasseCupom {
 			Vendedor vendedor02 = new Vendedor (2, "6588", "Antonio");
 			
 			
-			CupomFiscal cupom01 = new CupomFiscal (null, 100.00, new Date(), loja02, cliente01, vendedor01);
+			CupomFiscal cupom01 = new CupomFiscal (null, 100.00, date, loja02, cliente01, vendedor01);
 			/*CupomFiscal cupom02 = new CupomFiscal (null, 250.00, new Date(), loja03, cliente01, vendedor01);
 			CupomFiscal cupom03 = new CupomFiscal (null, 180.00, new Date(), loja02, cliente02, vendedor02);
 			CupomFiscal cupom04 = new CupomFiscal (null, 129.00, new Date(), loja02, cliente01, vendedor01);
@@ -64,10 +60,26 @@ public class TesteClasseCupom {
 			}
 			
 			@Test
-			public void AlteraCupom() {
+			public void CadastraCupomValorBranco() {
+				
+				CupomFiscal cupom = new CupomFiscal (null, null, date, loja02, cliente01, vendedor01);
+				
+				//Execução		
+				boolean retorno1 = cupomService.cadastrarCupomFiscal(cupom);
+				
+				
+				//Verificação
+				assertTrue(retorno1);
+				
+						
+						
+			}
+			
+			@Test
+			public void AlteraValorCupom() {
 				
 				//Execução
-				CupomFiscal cupom = new CupomFiscal (5, 500.00, new Date(0), loja02, cliente01, vendedor01);
+				CupomFiscal cupom = new CupomFiscal (5, 500.00, new Date(), loja02, cliente01, vendedor01);
 				boolean retorno = cupomService.alterarCupomFiscal(cupom);
 				
 				//Verificação
@@ -116,7 +128,7 @@ public class TesteClasseCupom {
 						
 				
 				//Verificação
-				assertThat(cupomService.exibirTodosCuponsFiscais().size(), is (100));
+				assertThat(cupomService.exibirTodosCuponsFiscais().size(), is (0));
 						
 						
 			}

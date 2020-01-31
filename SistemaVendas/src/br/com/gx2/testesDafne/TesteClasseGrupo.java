@@ -5,16 +5,10 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import org.hamcrest.Matcher;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
-import br.com.gx2.dao.DAOFactory;
-import br.com.gx2.dao.GrupoDAO;
 import br.com.gx2.entity.Grupo;
 import br.com.gx2.service.GrupoService;
 import br.com.gx2.service.ServiceFactory;
@@ -78,8 +72,8 @@ public class TesteClasseGrupo {
 	public void ApagaGrupo() {
 		
 		//Execução		
-		boolean retorno = grupoService.apagarGrupo(11);
-		
+		boolean retorno = grupoService.apagarGrupo(17);
+				
 		
 		//Verificação
 		assertTrue(retorno);
@@ -115,7 +109,7 @@ public class TesteClasseGrupo {
 				
 		
 		//Verificação
-		assertThat(grupoService.exibirTodosGrupos().size(), is (17));
+		assertThat(grupoService.exibirTodosGrupos().size(), is (26));
 				
 				
 	}

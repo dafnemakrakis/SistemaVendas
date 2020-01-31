@@ -4,19 +4,11 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Test;
 
-import br.com.gx2.dao.DAOFactory;
-import br.com.gx2.dao.GrupoDAO;
-import br.com.gx2.dao.ProdutoDAO;
 import br.com.gx2.entity.Grupo;
-import br.com.gx2.entity.Loja;
 import br.com.gx2.entity.Produto;
 import br.com.gx2.service.GrupoService;
-import br.com.gx2.service.LojaService;
 import br.com.gx2.service.ProdutoService;
 import br.com.gx2.service.ServiceFactory;
 
