@@ -46,12 +46,27 @@ public class TesteClasseVendedores {
 		}
 		
 		@Test
-		public void CadastraGrupoBranco() {
+		public void CadastraVendedorMatriculaBranco() {
 			
-			Grupo grupo03 = new Grupo (null, "");
+			Vendedor vendedor = new Vendedor (null, "", "Neiva");
 			
 			//Execução		
-			boolean retorno1 = grupoService.cadastrarGrupo(grupo03);
+			boolean retorno1 = vendedorService.cadastrarVendedor(vendedor);
+			
+			
+			//Verificação
+			assertTrue(retorno1);
+							
+					
+		}
+		
+		@Test
+		public void CadastraVendedorNomeBranco() {
+			
+			Vendedor vendedor = new Vendedor (null, "1654", "");
+			
+			//Execução		
+			boolean retorno1 = vendedorService.cadastrarVendedor(vendedor);
 			
 			
 			//Verificação
