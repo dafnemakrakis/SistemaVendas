@@ -110,12 +110,12 @@ public class TesteClasseGrupo {
 	public void PesquisaTodosGrupos() {
 		
 		//Execução	
-		List<Grupo> grupos = new ArrayList<Grupo>();
-		boolean retorno = grupoService.exibirTodosGrupos(grupos);
+		
+		grupoService.exibirTodosGrupos();
 				
 		
 		//Verificação
-		assertTrue(retorno);
+		assertThat(grupoService.exibirTodosGrupos().size(), is (17));
 				
 				
 	}

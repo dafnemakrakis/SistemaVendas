@@ -123,12 +123,12 @@ public class TesteClasseVendedores {
 		public void PesquisaTodosVendedores() {
 			
 			//Execução	
-			List<Vendedor> vendedores = new ArrayList<Vendedor>();
-			boolean retorno = vendedorService.exibirTodosVendedores(vendedores);
+		
+			vendedorService.exibirTodosVendedores();
 					
 			
 			//Verificação
-			assertTrue(retorno);
+			assertThat(vendedorService.exibirTodosVendedores().size(), is (10));
 					
 					
 		}

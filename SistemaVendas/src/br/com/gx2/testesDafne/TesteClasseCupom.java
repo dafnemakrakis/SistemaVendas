@@ -111,12 +111,12 @@ public class TesteClasseCupom {
 			public void PesquisaTodosCupons() {
 				
 				//Execução	
-				List<CupomFiscal> cupom = new ArrayList<CupomFiscal>();
-				boolean retorno = cupomService.exibirTodosCuponsFiscais(cupom);
+				
+				cupomService.exibirTodosCuponsFiscais();
 						
 				
 				//Verificação
-				assertTrue(retorno);
+				assertThat(cupomService.exibirTodosCuponsFiscais().size(), is (100));
 						
 						
 			}

@@ -127,15 +127,14 @@ public class TesteClasseProdutos {
 		}
 		
 		@Test
-		public void PesquisaTodosProduto() {
+		public void PesquisaTodosProdutos() {
 			
 			//Execução	
-			List<Produto> lojas = new ArrayList<Produto>();
-			boolean retorno = produtoService.exibirTodosProduto(produto);
+			produtoService.exibirTodosProdutos();
 					
 			
 			//Verificação
-			assertTrue(retorno);
+			assertThat(produtoService.exibirTodosProdutos().size(), is (17));
 					
 					
 		}

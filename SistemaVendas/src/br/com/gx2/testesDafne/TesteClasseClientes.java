@@ -124,12 +124,11 @@ public class TesteClasseClientes {
 		public void PesquisaTodosClientes() {
 			
 			//Execução	
-			List<Cliente> cliente = new ArrayList<Cliente>();
-		    clienteService.exibirTodosCliente(cliente);
+		    clienteService.exibirTodosClientes();
 					
 			
 			//Verificação
-		    assertThat(clienteService.exibirTodosClientes(), is(cliente));
+		    assertThat(clienteService.exibirTodosClientes().size(), is (9));
 					
 					
 		}

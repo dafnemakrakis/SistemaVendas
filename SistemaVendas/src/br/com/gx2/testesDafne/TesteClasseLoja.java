@@ -110,12 +110,11 @@ public class TesteClasseLoja {
 		public void PesquisaTodasLojas() {
 			
 			//Execução	
-			List<Loja> lojas = new ArrayList<Loja>();
-			boolean retorno = LojaService.exibirTodasLojas(lojas);
+			lojaService.exibirTodasLojas();
 					
 			
 			//Verificação
-			assertTrue(retorno);
+			assertThat(lojaService.exibirTodasLojas().size(), is (15));
 					
 					
 		}
