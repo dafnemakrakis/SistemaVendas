@@ -18,9 +18,11 @@ public class TesteClasseLoja {
 		//Montagem cenário
 		LojaService lojaService = ServiceFactory.createLojaService();
 		
+		String nome1 = "Partenon";
+		String nome2 = "Centro";
 		
-		Loja loja02 = new Loja (null, "Partenon");
-		Loja loja03 = new Loja (null, "Centro");
+		Loja loja02 = new Loja (null, nome1);
+		Loja loja03 = new Loja (null, nome2);
 
 		
 		@Test

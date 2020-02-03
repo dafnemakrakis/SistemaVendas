@@ -21,12 +21,17 @@ public class TesteClasseProdutos {
 		
 		ProdutoService produtoService = ServiceFactory.createProdutoService();
 		
+		String ncm1 = "684615";
+		String ncm2 = "484325";
+		String desc1 = "camiseta";
+		String desc2 = "saia";
+		
 		Grupo grupo01 = new Grupo (1, "Feminino");   
 		Grupo grupo02 = new Grupo (2, "Masculino");
 		
 		
-		Produto produto01 = new Produto (null, "684615", "camiseta", grupo02);   
-		Produto produto02 = new Produto (null, "484325", "saia", grupo01);
+		Produto produto01 = new Produto (null, ncm1, desc1, grupo02);   
+		Produto produto02 = new Produto (null, ncm2, desc2, grupo01);
 		
 		
 		@Test

@@ -17,10 +17,14 @@ public class TesteClasseClientes {
 		//Montagem cenário
 		ClienteService clienteService = ServiceFactory.createClienteService();
 		
+		String nome1 = "André";
+		String nome2 = "Ana";
+		String cpf1 = "96187898648";
+		String cpf2 = "14725836912";
 	
 		
-		Cliente cliente01 = new Cliente (null, "André", "96187898648");   
-		Cliente cliente02 = new Cliente (null, "Ana", "14725836912");
+		Cliente cliente01 = new Cliente (null, nome1, cpf1);   
+		Cliente cliente02 = new Cliente (null, nome2, cpf2);
 		
 				
 		@Test

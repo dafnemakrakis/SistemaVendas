@@ -19,10 +19,12 @@ public class TesteClasseGrupo {
 			
 		//Montagem cenário
 		private GrupoService grupoService = ServiceFactory.createGrupoService();
+			
+		String nome1 = "Feminino";
+		String nome2 = "Masculino";
 				
-				
-		private Grupo grupo01 = new Grupo (null, "Feminino");   
-		private Grupo grupo02 = new Grupo (null, "Masculino");
+		private Grupo grupo01 = new Grupo (null, nome1);   
+		private Grupo grupo02 = new Grupo (null, nome2);
 			
 	
 	

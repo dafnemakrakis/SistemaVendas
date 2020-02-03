@@ -18,9 +18,14 @@ public class TesteClasseVendedores {
 		//Montagem cenário
 		VendedorService vendedorService = ServiceFactory.createVendedorService();
 	
+		String matricula1 = "0521";
+		String matricula2 = "6588";
+		String nome1 = "Neiva";
+		String nome2 = "Antonio";
 		
-		Vendedor vendedor01 = new Vendedor (null, "0521", "Neiva");   
-		Vendedor vendedor02 = new Vendedor (null, "6588", "Antonio");
+		
+		Vendedor vendedor01 = new Vendedor (null, matricula1, nome1);   
+		Vendedor vendedor02 = new Vendedor (null, matricula2, nome2);
 		
 				
 		@Test
